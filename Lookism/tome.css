@@ -1,0 +1,115 @@
+/* Styles pour la page de détails du tome */
+#tome-details {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+#tome-details h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tome-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.tome-cover {
+    flex: 0 0 40%;
+    max-width: 400px;
+}
+
+.tome-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tome-cover img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.tome-chapters {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.tome-chapters h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.tome-chapters ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.tome-chapters li {
+    margin-bottom: 0.5rem;
+}
+
+.tome-chapters a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.8rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.tome-chapters a:hover {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive design pour les petits écrans */
+@media (max-width: 900px) {
+    .tome-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tome-cover {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #tome-details {
+        padding: 1rem;
+    }
+
+    #tome-details h2 {
+        font-size: 2rem;
+    }
+
+    .tome-chapters ul {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+

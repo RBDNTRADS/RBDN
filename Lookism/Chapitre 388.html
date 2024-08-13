@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 388 - Nom de votre Team de Traduction</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapitre.css">
+    <script src="chapter-viewer.js" defer></script>
+    <script src="SEO.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="main-navbar">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#" target="_blank">Discord</a></li>
+                <li><a href="#" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="chapter-menu">
+            <button class="chapter-toggle" style="text-align: center;">Ouvrir le menu des chapitres</button>
+            <div class="chapter-content">
+                <div class="chapter-navigation">
+                    <a href="#" id="prev-chapter" class="nav-btn">Chapitre PrÃ©cÃ©dent</a>
+                    <p id="current-chapter">Chapitre 24</p>
+                    <a href="#" id="next-chapter" class="nav-btn">Chapitre Suivant</a>
+                </div>
+                <div class="chapter-list">
+                    <select class="chapter-select" id="chapter-select" onchange="redirectToChapter()">
+                        <option value="">Sélectionnez un chapitre</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="chapter-images">
+            <img src="https://anime-sama.fr/s2/scans/Lookism/388/1.jpg">
+            <img src="https://anime-sama.fr/s2/scans/Lookism/388/2.jpg">
+            <img src="https://anime-sama.fr/s2/scans/Lookism/388/3.jpg">
+            <img src="https://anime-sama.fr/s2/scans/Lookism/388/4.jpg">
+            <img src="https://anime-sama.fr/s2/scans/Lookism/388/5.jpg">
+            <img src="https://anime-sama.fr/s2/scans/Lookism/388/6.jpg">
+            <img src="https://anime-sama.fr/s2/scans/Lookism/388/7.jpg">
+        </div>  
+    </main>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">&#8593;</button>
+
+    <script>
+                                const chapterData = {
+            prevChapter: { href: "Chapitre 387.html", title: "Chapitre Précédent" },
+            currentChapter: "Chapitre 388",
+            nextChapter: { href: "Chapitre 389.html", title: "Chapitre Suivant" }
+        };
+
+        const prevChapterLink = document.getElementById('prev-chapter');
+        const currentChapterTitle = document.getElementById('current-chapter');
+        const nextChapterLink = document.getElementById('next-chapter');
+
+        prevChapterLink.href = chapterData.prevChapter.href;
+        prevChapterLink.textContent = chapterData.prevChapter.title;
+
+        currentChapterTitle.textContent = chapterData.currentChapter;
+
+        nextChapterLink.href = chapterData.nextChapter.href;
+        nextChapterLink.textContent = chapterData.nextChapter.title;
+    </script>
+
+    <footer>
+        <p>&copy; 2024 [Nom de votre Team]. Tous droits rÃ©servÃ©s.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
